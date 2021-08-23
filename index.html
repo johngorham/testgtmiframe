@@ -33,8 +33,10 @@
   <script>
     window.addEventListener("message", doSomethingWithTheMessage, false);
 
-function doSomethingWithTheMessage(event) {
-    console.log(event);
-}
+    function doSomethingWithTheMessage(event) {
+        var b=JSON.parse(event.data);
+        dataLayer.push(b)
+        console.log(event);
+    }
   </script>
 </html>
